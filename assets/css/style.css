@@ -1,0 +1,41 @@
+:root{
+    --lightblue: rgba(158, 203, 252, 0.688);
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color:var(--lightblue)
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Raleway', serif;
+    font-weight: 700;
+  }
+
+
+  header{
+     color:white;
+     text-align: center;
+     font-size: 50px;
+     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  }
+
+  .search-div {
+      
+    background: rgb(9,9,121);
+    background: linear-gradient(0deg, rgba(9,9,121,1) 0%, rgba(5,109,188,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+.historical-search {
+    cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}

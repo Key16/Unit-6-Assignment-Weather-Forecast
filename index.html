@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sir What's the weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/jass.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+</head>
+
+<body>
+    <header>
+        Weather Dashboard
+    </header>
+    <div class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh bg-white">
+        <div class="search-div col-12 col-lg-3 bg-light p-3">
+            <h1 class="text-primary text-white">What weather would you like to see?</h1>
+            <form id="search-form" class="mb-2">
+                <input id="search-input" class="form-input w-100" type="text" placeholder="Name of City">
+
+                <button class="btn btn-block btn-light">Search</button>
+            </form>
+
+            <div id="history-content">
+
+            </div>
+
+        </div>
+
+        <div class="col-12 col-lg-9 p-3 text-black">
+            <h2><span id="result-text"></span></h2>
+            <div id="result-content"></div>
+            <div id="result-cards" class="flex-row">
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+
+</html>
