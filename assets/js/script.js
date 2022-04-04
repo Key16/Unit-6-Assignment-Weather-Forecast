@@ -34,19 +34,26 @@ function handleSearchFormSubmit(event) {
         console.log(historicalSearch)
     }
     renderHistory();
+    // still need to get all the previous options in one go and save it 
+    var history = [];
+    history.push(query);
+    localStorage.setItem("history", JSON.stringify(history))
 
 }
 
 // pulls from history and renders history from local storage
 function pullHistory() {
-    var storedHistory = localStorage.getItem("history");
+    var storedHistory = JSON.parse(localStorage.getItem("history"));
+
     if (storedHistory !== null) {
-        console.log(storedHistory)
-        var historicalSearch = document.createElement('div');
-        historicalSearch.classList.add('card', 'historical-search', 'bg-light', 'text-dark', 'mb-3', 'p-3');
-        historicalSearch.textContent = storedHistory
-        historicalSearch.dataset.value = storedHistory
-        historyEl.append(historicalSearch)
+        for (var i = 0; i < storedHistory.length; i++) {
+            console.log(storedHistory)
+            var historicalSearch = document.createElement('div');
+            historicalSearch.classList.add('card', 'historical-search', 'bg-light', 'text-dark', 'mb-3', 'p-3');
+            historicalSearch.textContent = storedHistory
+            historicalSearch.dataset.value = storedHistory
+            historyEl.append(historicalSearch)
+        }
     }
 
 }
@@ -56,17 +63,12 @@ pullHistory();
 var historyElSubmit = function (event) {
 
     var previousOpt = event.target.getAttribute('data-value');
-    console.log(previousOpt)
+    console.log("historical selection is" + previousOpt)
     if (previousOpt) {
         var query = previousOpt
         searchApi(query)
     }
-    // still need to get all the previous options in one go and save it 
-    var history = [];
-    history.push(previousOpt);
-    console.log(history)
 
-    localStorage.setItem("history", history)
 
 }
 
