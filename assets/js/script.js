@@ -74,7 +74,7 @@ var historyElSubmit = function (event) {
 
 //search for the lon lat from the input
 function searchApi(query) {
-    var locQueryUrl = 'http://api.openweathermap.org/geo/1.0/direct?';
+    var locQueryUrl = 'https://api.openweathermap.org/geo/1.0/direct?';
 
 
     locQueryUrl = locQueryUrl + 'q=' + query + '&limit=5&appid=' + APIkey
@@ -173,7 +173,7 @@ function printResults(resultObj, country) {
     var iconLocation = weatherIcon.icon
     var weatherDescription = weatherIcon.description
 
-    var iconPNG = "http://openweathermap.org/img/wn/" + iconLocation + ".png";
+    var iconPNG = "https://openweathermap.org/img/wn/" + iconLocation + ".png";
 
     bodyContentEl.innerHTML +=
         '<img src="' + iconPNG + '" alt=" ' + weatherDescription + '"><br/>'
@@ -240,7 +240,7 @@ function printForecastResults(resultObj, date) {
     var iconLocation = weatherIcon.icon
     var weatherDescription = weatherIcon.description
 
-    var iconPNG = "http://openweathermap.org/img/wn/" + iconLocation + ".png";
+    var iconPNG = "https://openweathermap.org/img/wn/" + iconLocation + ".png";
 
     bodyContentEl.innerHTML +=
         date + '<br/>';
