@@ -2,7 +2,7 @@
 
 ## Overview:
 
-![Screenshot of weather dashboard.](./Images/WeatherDashboard.png) 
+![Screenshot of weather dashboard.](./assets/Images/Weatherdashboard.png) 
 
 To view the code click here
 [click here](https://github.com/Key16/Unit-6-Assignment-Weather-Forecast).
